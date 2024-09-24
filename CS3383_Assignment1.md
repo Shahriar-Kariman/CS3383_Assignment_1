@@ -248,7 +248,16 @@ So the over all run time analysis is $\Theta(n^3)$.
 
 ### B
 
-For later I have no idea how to solve this.
+```py
+def FactorSum(A, n):
+  s = 0
+  for i in range(0,n-1):
+    p = 1
+    for j in range(i, n-1):
+      p = p*A[j]
+      s = s + p
+  return s
+```
 
 ## Question 3 - Repeating Numbers Algorithm
 

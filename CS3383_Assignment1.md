@@ -59,7 +59,7 @@ $$
 \end{split}
 $$
 
-So with $k$ being the equivalant of the number of iterations that would mean that the run time analysis is $\Theta(\log n)$.
+So with $k$ being the equivalent of the number of iterations that would mean that the run time analysis is $\Theta(\log n)$.
 
 ### D
 
@@ -186,9 +186,9 @@ $$
   \\
   k = log_2{n}
   \\
-  total\ number\ of\ foor\ loop\ iterations = \sum_{k=0}^{\log_2{n}} 2^k = \frac{2^{\log_2(n)+1} - 1}{2 - 1}
+  total\ number\ of\ for\ loop\ iterations = \sum_{k=0}^{\log_2{n}} 2^k = \frac{2^{\log_2(n)+1} - 1}{2 - 1}
   \\
-  total\ number\ of\ foor\ loop\ iterations < 2^{\log_2(n)+1} = 2n
+  total\ number\ of\ for\ loop\ iterations < 2^{\log_2(n)+1} = 2n
 \end{split}
 $$
 
@@ -219,7 +219,7 @@ $$
 \end{split}
 $$
 
-for the second loop the run time analisys is:
+for the second loop the run time analysis is:
 
 $$
 \begin{split}
@@ -248,6 +248,8 @@ So the over all run time analysis is $\Theta(n^3)$.
 
 ### B
 
+So what we are essentially adding up factorials of numbers $i$ to $j$ for every possible $i$ and $j$ where $i \geq j$ so I would calcualte that like this:
+
 ```py
 def FactorSum(A, n):
   s = 0
@@ -258,6 +260,8 @@ def FactorSum(A, n):
       s = s + p
   return s
 ```
+
+And the run time analysis of this algorithm is $\Theta(n^2)$ since we are only getting all possible values for $i$ and $j$ which is better than the previous algorithm.
 
 ## Question 3 - Repeating Numbers Algorithm
 

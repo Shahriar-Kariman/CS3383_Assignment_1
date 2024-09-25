@@ -238,7 +238,7 @@ $$
   S_3 = \sum_{j=0}^{n-1} (j-0) + \sum_{j=1}^{n-1} (j-1) + \sum_{j=2}^{n-1} (j-2) + ...\ + \sum_{j=n-1}^{n-1} (j-n+2)
   \\
   S_3 = f_0 + f_1 + f_2 + ...\ + f_{n-1}
-  \ each\ f\ statment\ is\ \Theta(n^2)
+  \ each\ f\ statement\ is\ \Theta(n^2)
   \\
   \Theta(n) \times \Theta(n^2) = \Theta(n^3)
 \end{split}
@@ -248,7 +248,7 @@ So the over all run time analysis is $\Theta(n^3)$.
 
 ### B
 
-So what we are essentially adding up factorials of numbers $i$ to $j$ for every possible $i$ and $j$ where $i \geq j$ so I would calcualte that like this:
+So what we are essentially adding up factorials of numbers $i$ to $j$ for every possible $i$ and $j$ where $i \geq j$ so I would calculate that like this:
 
 ```py
 def FactorSum(A, n):
@@ -284,7 +284,7 @@ Since in the algorithm I am running through the array 2 times the run time compl
 
 ## Question 4 - Making Change for n Cents
 
-lets assume I want to make change for 30 cents if I use the greedy algorithm I would have `25 + 1 + 1 + 1 + 1 + 1` wich is `5` coins but I now for a fact that I can use `3` coins if I only use 10 cents for each. This means that the greedy algorithm is not optimal.
+lets assume I want to make change for 30 cents if I use the greedy algorithm I would have `25 + 1 + 1 + 1 + 1 + 1` which is `5` coins but I now for a fact that I can use `3` coins if I only use 10 cents for each. This means that the greedy algorithm is not optimal.
 
 ## Question 5 - Points on The Line
 
@@ -313,6 +313,6 @@ So the complexity of the sorting algorithm is $\Theta(n\log{n})$ and every index
 
 Lets assume the proposed greedy algorithm is not optimal and uses $k$ intervals that means there is an algorithm A that solves the problem using $k-1$ intervals.
 
-The greedy algorithm starts at point $x1$ then if $A$ starts the firts interval at point $x$  where $x \leq x_1$ because if $x \geq x_1$  then some points will not be covered so $A$ is just slightly shifted to the left compared to the greedy.
+The greedy algorithm starts at point $x1$ then if $A$ starts the first interval at point $x$  where $x \leq x_1$ because if $x \geq x_1$  then some points will not be covered so $A$ is just slightly shifted to the left compared to the greedy.
 
-Since we determind that $x \leq x_1$ then $[x_1, x_1+1]$ still covers all the points in the array that $[x, x+1]$ covers so it would not make a difference if we started $A$ at $x_1$ lets call this modified $A$, $A^\prime$ and if we keep following all of the intervals of $A^\prime$ we end up with exaclty the first $k-1$ intervals in the greedy algorithm. Knowing that the greedy algorithm needs $k$ intervals to complete then $A^\prime$ is incomplete and this **contradicts** the assumption that $A$ only needs $k-1$ intervals to be complete so the greedy algorithm that uses $k$ intervals is optimal.
+Since we determined that $x \leq x_1$ then $[x_1, x_1+1]$ still covers all the points in the array that $[x, x+1]$ covers so it would not make a difference if we started $A$ at $x_1$ lets call this modified $A$, $A^\prime$ and if we keep following all of the intervals of $A^\prime$ we end up with exactly the first $k-1$ intervals in the greedy algorithm. Knowing that the greedy algorithm needs $k$ intervals to complete then $A^\prime$ is incomplete and this **contradicts** the assumption that $A$ only needs $k-1$ intervals to be complete so the greedy algorithm that uses $k$ intervals is optimal.

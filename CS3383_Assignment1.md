@@ -1,9 +1,12 @@
 # CS3383 Assignment 1
 
 **Author:** Shahriar Kariman
+
 *Due:* September 25th
 
 ## Question 1 - Run Time Analysis
+
+Run time analysis for each part.
 
 ### A
 
